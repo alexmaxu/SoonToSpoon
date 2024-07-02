@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SoonToSpoonApp: App {
+    @StateObject var mainVM = MainVM()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GroceryList()
+                .environmentObject(mainVM)
         }
     }
 }
